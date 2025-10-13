@@ -3,14 +3,16 @@ import Navbar from './Navbar';
 function Projects() {
   const projectList = [
     {
+      id: 1,
       title: 'Todo App',
       description: 'A simple todo list using React and localStorage.',
-      link: 'https://github.com/winz/todo-app',
+      link: 'https://github.com/winzjamil/Todo-app-in-js',
     },
     {
-      title: 'Weather App',
-      description: 'Fetches weather data from an API using Axios.',
-      link: 'https://github.com/winz/weather-app',
+      id: 2,
+      title: 'E-Commerce App',
+      description: 'Retrieves data from an API ',
+      link: 'https://github.com/winzjamil/E-commerce',
     },
   ];
   return (
@@ -20,10 +22,7 @@ function Projects() {
         <h2 className="text-3xl font-bold ">Projects</h2>
         <div className="p-4 bg-gray-200">
           {projectList.map((proj) => (
-            <div
-              key={proj.title}
-              className=" p-4 rounded  bg-white m-1 shadow-md"
-            >
+            <div key={proj.id} className=" p-4 rounded  bg-white m-1 shadow-md">
               <h3 className="text-xl font-semibold">{proj.title}</h3>
               <p className="mt-2">{proj.description}</p>
               <a

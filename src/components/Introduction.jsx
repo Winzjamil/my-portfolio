@@ -10,7 +10,7 @@ function Introduction() {
       <Navbar />
       <section className="flex flex-col w-1/2  mx-auto gap-5 justify-center items-center bg-white shadow-md  p-6">
         <div
-          className=" p-3 rounded-full shadow-md bg-sky-200 "
+          className=" p-3 rounded-full shadow-md bg-sky-200+ "
           onClick={() => navigate('/about')}
         >
           <img

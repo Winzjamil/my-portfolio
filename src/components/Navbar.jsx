@@ -1,6 +1,4 @@
-import React, { Children } from 'react';
 import { NavLink } from 'react-router-dom';
-
 import {
   FaUser,
   FaCode,
@@ -52,7 +50,6 @@ function Navbar() {
           }
         >
           <div className="flex items-center gap-2 text-white hover:text-gray-300 transition duration-300">
-            {' '}
             <FaCode className="text-lg text-blue-300" /> Skills
           </div>
         </NavLink>
