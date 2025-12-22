@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar';
+import Carousel from './Carousel';
+
 function Projects() {
   const projectList = [
     {
@@ -11,31 +12,50 @@ function Projects() {
     {
       id: 2,
       title: 'E-Commerce App',
-      description: 'Retrieves data from an API ',
+      description: `A full stack React and Node.js platform where user can browse
+      and purchase product, seller can manage listing,update, and delete their own product.`,
+
       link: 'https://github.com/winzjamil/E-commerce',
+      link1: 'hdhjhvhjvhjchvcjvhcjhvjkhvkjhjkvhjkchvj',
     },
   ];
   return (
-    <div className=" flex flex-col  gap-2 bg-gradient-to-br from-blue-50 to-blue-500 pb-4 rounded-md ">
-      <Navbar />
-      <section className="bg-white p-4 flex rounded-md  mx-auto flex-col gap-4 items-center w-1/2">
-        <h2 className="text-3xl font-bold ">Projects</h2>
-        <div className="p-4 bg-gray-200">
-          {projectList.map((proj) => (
-            <div key={proj.id} className=" p-4 rounded  bg-white m-1 shadow-md">
-              <h3 className="text-xl font-semibold">{proj.title}</h3>
-              <p className="mt-2">{proj.description}</p>
+    <div className=" flex flex-col gap-30  min-h-screen  bg-white ">
+      <h1 className=" font-bold pl-2 text-lg ">Projects</h1>
+
+      <div className="flex flex-wrap justify-evenly items-center  w-full">
+        <div className="bg-gray-400 pb-1  px-1">
+          {projectList.map((item) => (
+            <div
+              key={item.id}
+              className=" p-4 rounded flex w-full  bg-white mt-1 flex-col  shadow-md"
+            >
+              <h3>{item.title}</h3>
+              <p className=" w-full max-w-sm break-words whitespace-break font-light text-sm ">
+                {item.description}
+              </p>
               <a
-                href={proj.link}
+                href={item.link}
+                className="text-blue-500 mt-2 inline-block"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub →
+              </a>
+              <a
+                href={item.link1}
                 className="text-blue-500 mt-2 inline-block"
                 target="_blank"
               >
-                View on GitHub →
+                View on Live →
               </a>
             </div>
           ))}
         </div>
-      </section>
+        <div>
+          <Carousel />
+        </div>
+      </div>
     </div>
   );
 }
