@@ -1,7 +1,7 @@
 function MainLayout({ children, id }) {
   return (
     <>
-      <section id={id} className="  bg-sky-200  ">
+      <section id={id} className="bg-gray-700">
         {children}
       </section>
     </>

@@ -5,7 +5,6 @@ import NavColumn from '../NavColumn';
 
 function MainPage() {
   const [activeSec, setActiveSec] = useState('introduction');
-  console.log('active', activeSec);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

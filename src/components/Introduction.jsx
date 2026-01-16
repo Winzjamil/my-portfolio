@@ -2,7 +2,7 @@ import jamilImg from '../assets/profile/jamil.jpg';
 import { scrollTo } from '.';
 function Introduction() {
   return (
-    <div className="flex flex-col min-h-screen  gap-5 justify-center items-center bg-white shadow-md  ">
+    <div className="flex flex-col gap-5 pt-20 p-4 h-screen justify-center items-center  shadow-md  ">
       <div className=" p-2 rounded-full shadow-md bg-sky-200 ">
         <img
           src={jamilImg}

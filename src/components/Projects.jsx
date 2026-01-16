@@ -13,17 +13,18 @@ function Projects() {
       id: 2,
       title: 'E-Commerce App',
       description: `A full stack React and Node.js platform where user can browse
-      and purchase product, seller can manage listing,update, and delete their own product.`,
+      and purchase product, seller can manage listing,update, and delete their own product
+       and admin can manage users and track users activities.`,
 
       link: 'https://github.com/winzjamil/E-commerce',
-      link1: 'hdhjhvhjvhjchvcjvhcjhvjkhvkjhjkvhjkchvj',
+      live: 'https://aj-shop-lilac.vercel.app',
     },
   ];
   return (
-    <div className=" flex flex-col gap-30  min-h-screen  bg-white ">
+    <div className=" flex  flex-col gap-30 w-full min-h-screen ">
       <h1 className=" font-bold pl-2 text-lg ">Projects</h1>
 
-      <div className="flex flex-wrap justify-evenly items-center  w-full">
+      <div className="flex flex-wrap justify-evenly items-center w-full">
         <div className="bg-gray-400 pb-1  px-1">
           {projectList.map((item) => (
             <div
@@ -42,13 +43,15 @@ function Projects() {
               >
                 View on GitHub →
               </a>
-              <a
-                href={item.link1}
-                className="text-blue-500 mt-2 inline-block"
-                target="_blank"
-              >
-                View on Live →
-              </a>
+              {item.title === 'E-Commerce App' ? (
+                <a
+                  href={item.live}
+                  className="text-blue-500 mt-2 inline-block"
+                  target="_blank"
+                >
+                  View Live →
+                </a>
+              ) : null}
             </div>
           ))}
         </div>

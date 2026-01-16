@@ -3,16 +3,12 @@ import jamilImg from '../assets/profile/jamil.jpg';
 import { NavLink } from 'react-router-dom';
 function About() {
   return (
-    <div className=" flex flex-col  min-h-screen  bg-indigo-300 gap-25  ">
+    <div className=" flex flex-col min-h-screen gap-20  gap-4 w-full   ">
       <h2 className="text-lg pl-2 text-white font-semibold w-full">About Me</h2>
 
       <div className="flex flex-wrap justify-evenly w-full items-center">
         <div className="p-1 rounded bg-black/50">
-          <img
-            src={jamilImg}
-            alt="Winz"
-            className=" w-70 h-90 object-fit transition-transform duration-300 hover:scale-110 border-sky-300  "
-          />
+          <img src={jamilImg} alt="Winz" className=" w-70 h-90 object-fit  " />
         </div>
         <div className=" flex flex-col font-light text-md  text-white  leading-relaxed  max-w-md p-2.5 bg-black border border-white shadow-md rounded">
           <p className="mb-4">
@@ -42,7 +38,7 @@ function About() {
       <div className="flex w-full items-center justify-center  ">
         <NavLink
           to="/resume"
-          className="py-0.5 px-2 text-sm font-extralight border-b-2 border-b-stone-300 cursor-pointer bg-white shadow-md rounded-full"
+          className="py-0.5 px-2 text-sm font-extralight border-b-2 border-b-stone-300 cursor-pointer bg-white shadow-md rounded"
         >
           View Resume
         </NavLink>

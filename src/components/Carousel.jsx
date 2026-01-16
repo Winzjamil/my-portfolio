@@ -12,7 +12,7 @@ function Carousel() {
   const images = [home, signup, login, cart];
 
   return (
-    <div className="w-full max-w-md mx-auto   rounded-t-lg gap-1 bg-gray-400 flex items-center flex-wrap">
+    <div className=" max-w-md mx-auto   rounded-t-lg gap-1 bg-gray-400 flex items-center flex-wrap">
       <p className="w-full text-center font-semibold ">Project Review</p>
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
