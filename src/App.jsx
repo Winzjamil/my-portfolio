@@ -1,10 +1,15 @@
 import './App.css';
 import MainPage from './components/page/MainPage';
+import { Route, Routes } from 'react-router-dom';
+import MyResume from './components/my-resume/MyResume';
 
 function App() {
   return (
     <>
-      <MainPage />
+      <Routes>
+        <Route path="/resume" element={<MyResume />} />
+        <Route path="/" element={<MainPage />} />
+      </Routes>
     </>
   );
 }
